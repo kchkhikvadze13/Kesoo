@@ -1,0 +1,70 @@
+body {
+    background: goldenrod;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,
+h2,
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    background: gold;
+    padding: 20px;
+}
+
+pre code {
+    background: white;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+}
+
+a {
+    color: red;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: palevioletred;
+}
+
+a.special {
+    color: sandybrown;
+}
+
+a:active {
+    color: purple;
+}
+
+#hover-div {
+    color: white;
+    background: blue;
+    padding: 10px;
+}
+
+#hover-div:hover {
+    background: black;
+}
+
+#hover-div p:first-child {
+    color: red;
+}
+
+#hover-div p:last-child {
+    font-weight: bold;
+}

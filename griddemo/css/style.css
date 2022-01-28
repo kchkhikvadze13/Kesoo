@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.nav {
+    list-style: none;
+    background-color: rgb(236, 67, 45);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/*list items inside unordered lists*/
+
+ul.nav li {
+    float: left;
+}
+
+ul.nav li a {
+    display: block;
+    padding: 8px 16px;
+    color: black;
+    text-decoration: bisque;
+}
+
+ul.nav li a:hover {
+    background-color: black;
+    color: white;
+}
+
+.active {
+    background-color: teal;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 4px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: rgb(219, 202, 197);
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.navmenu {
+    grid-column: 1/ span 3;
+    grid-row: 1;
+}
+
+.main-image {
+    grid-column: 1/span 3;
+    grid-row: 3;
+}
+
+.main {
+    grid-column: 1/span 2;
+    grid-row: 4;
+}
+
+.main2 {
+    grid-column: 1/span 2;
+    grid-row: 6;
+}
+
+.sidenav {
+    grid-column: 3;
+    grid-row: 4/span 3;
+    background-color: burlywood;
+}
+
+.support {
+    grid-column: 1;
+    grid-row: 5/span 1;
+    background-color: burlywood;
+}
+
+.support2 {
+    grid-column: 2;
+    grid-row: 5/span 1;
+    background-color: burlywood;
+}
+
+.header {
+    grid-column: 1/span 3;
+    grid-row: 2;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: burlywood;
+    color: white;
+    text-align: center;
+    position: fixed;
+}

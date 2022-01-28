@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+
+
+
+        <ul class="nav">
+            <div id="mySidebar" class="navbar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+
+            </div>
+            <button class="openbtn" onclick="openNav()">&#9776; </button>
+        </ul>
+        <div class="grid-item Header">DACHA<img src="gallery/dd-logo.png" style="width: 30px; height: 40px;">DINER</div>
+        <br>
+        <div class="textt">
+            <p>
+                <h1>
+                    Eastern European cuisine
+                </h1>
+                Eastern European cuisine encompasses many different cultures, ethnicities, languages, and histories of Eastern Europe. The cuisine of the region is strongly influenced by its climate and still varies, depending on a country. For example, countries of
+                the Sarmatic Plain (Belarusian, Russian and Ukrainian cuisine) show many similarities.According to the Ethnic Food Lover's Companion, all significant Eastern European cuisines are closely connected with the political, social and economic
+                revival of the region following the long periods of historical turmoil. "These are substantial cuisines, meaty, rooty, smoky – part comfort food, part extravagance.
+                <br> " Their main ingredients include eggs, used most frequently in doughs and pastries; dairy products (with yogurt and cheese among the staples); grains, including rye, barley, wheat, buckwheat and millet used in kashas and in the making
+                of breads; vegetables, in cold storage and in pickling; fish (salmon, pike, carp and herring), birds and poultry (chicken, duck, goose, partridge, quail, turkey); red meats such as veal, beef, pork and mutton; and plentiful fruits including
+                pears, plums, cherries, raspberries, pomegranates, dates, and figs, used for desserts and a variety of liqueurs.<br> The nutritional index of traditional dishes is generally high cholesterol, high sodium, and high fat.
+            </p>
+        </div>
+
+        <div class="picture">
+            <img src="gallery/sachmeli.jpg" style="width: 620px; height: 450px; ">
+            <br>
+        </div>
+
+        <br>
+        <div class="textt2">
+            <p>
+                <h1>
+                    Jewish cuisine
+                </h1>
+                Jewish cuisine refers to the cooking traditions of the Jewish people worldwide. It has evolved over many centuries, shaped by Jewish dietary laws (kashrut), Jewish festival and Shabbat (Sabbath) traditions. <br> Jewish cuisine is influenced
+                by the economics, agriculture and culinary traditions of the many countries where Jewish communities have settled and varies widely throughout the whole world. The history of Jewish cuisine begins with the cuisine of the ancient Israelites.
+                As the Jewish diaspora grew, different styles of Jewish cooking developed. The distinctive styles in Jewish cuisine are Ashkenazi, Sephardi and Mizrahi. There are also dishes from Jewish communities from Ethiopia, Iran and Yemen. Since
+                the establishment of the State of Israel in 1948 and particularly since the late 1970s, a nascent Israeli "fusion cuisine" has developed. Jewish Israeli cuisine has adapted a multitude of elements, overlapping techniques and ingredients
+                from many diaspora culinary traditions.
+
+            </p>
+            <button class="button2 button3"><a href="https://delishably.com/world-cuisine/Nici" target="blank">click here to read more</a></button>
+        </div>
+
+        <div class="picture2">
+            <img src="gallery/scale.jpg" style="width: 620px; height: 450px;">
+        </div>
+
+
+        <div class="fa-facebook">
+            <br>
+            <a href="https://www.facebook.com/dachadiner" target="blank"><img src="gallery/fb logo.png" style="width:55px; height: 60px;"></a>
+        </div>
+        <div class="in-instagram">
+            <a href="https://www.instagram.com/dachadiner/" target="blank"><img src="gallery/instagram.png" style="width:75px; height:85px ;"></a>
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("Main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("Main").style.marginLeft = "0";
+    }
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<body>
+    <div class="footer">
+
+        <p>Thursday & Friday 4pm - 8pm; Saturday & Sunday 10am - 2pm </p>
+
+        <body onload="startTime()">
+
+
+
+            <div id="txt"></div>
+
+            <script>
+                function startTime() {
+                    const today = new Date();
+                    let h = today.getHours();
+                    let m = today.getMinutes();
+                    let s = today.getSeconds();
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+                    setTimeout(startTime, 1000);
+                }
+
+                function checkTime(i) {
+                    if (i < 10) {
+                        i = "0" + i
+                    }; // add zero in front of numbers < 10
+                    return i;
+                }
+            </script>
+        </body>
+
+    </div>
+
+</body>
+
+
+
+
+</html>

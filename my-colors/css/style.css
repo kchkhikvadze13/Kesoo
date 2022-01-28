@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(4, 57, 83);
+}
+
+.nav {
+    list-style: none;
+    background-color: rgb(91, 127, 186);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/*list items inside unordered lists*/
+
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: 1px solid #555;
+    border-bottom: 1px solid #555;
+}
+
+ul.nav li a {
+    display: block;
+    padding: 10px 16px;
+    color: rgb(0, 0, 0);
+    text-decoration: rgb(8, 8, 7);
+}
+
+ul.nav li a:hover {
+    background-color: rgb(150, 199, 238);
+    color: white;
+}
+
+.active {
+    background-color: rgb(54, 81, 112);
+}

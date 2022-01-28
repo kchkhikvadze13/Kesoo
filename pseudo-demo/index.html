@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>welcome to web 2!</h1>
+        <h4>Today, we will mess with some pseudo classes and elements</h4>
+
+
+        <hr>
+
+        <h2>lets first dive deeper into CSS</h2>
+        <p>if we think of CSS in terms of selectors, properties and values, then a typical CSS entry would look like this</p>
+        <pre>
+        <code>
+            selector {property: value;
+            }
+        </code>
+    </pre>
+        <p>To style the above, we need to add two tags together, we call this CSS combinators</p>
+
+        <hr>
+
+
+        <h2> what are pseudo classes?</h2>
+        <p>again, if we think of css in terms of selectors, properties and values, then a pseudo calss is an add-on to a selector.</p>
+        <pre>
+    <code>
+        selector:pseudo_class {property: value'
+
+        }
+    </code>
+</pre>
+        <h4>we use them for links</h4>
+        <p>if we want our <a href="#">link</a> to look different, we can simply add it in my css follows:</p>
+
+        <pre>
+    <code>
+        a {color:red;}
+    </code>
+</pre>
+        <p>but if we want each of our <a href="#">links states</a>to look different then we will use a pseudo class like:</p>
+        <ul>
+            <li>:visited</li>
+            <li>:hover</li>
+            <li>:active</li>
+        </ul>
+        <p>special <a href="#" class="special">links</a></p>
+
+        <h4>we can use pseudo classes on any tag.</h4>
+        <div id="hover-div">
+            <p>here we will add a hover to our div</p>
+            <p>heeeeeeeyyyy</p>
+            <p>wha do you think?</p>
+        </div>
+
+    </div>
+    <h4>we can even call on specific selectors depending on their hierarchy</h4>
+    <p>style in above div will change</p>
+</body>
+
+</html>

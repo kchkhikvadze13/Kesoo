@@ -1,0 +1,71 @@
+body {
+    color: brown;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    background-color: #dddada;
+}
+
+h1 {
+    color: #000000fb;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+}
+
+#happyNewYear-div {
+    font-family: sans-serif;
+    color: rgb(4, 43, 48);
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#happyNewYear-div>div {
+    padding: 10px;
+    border-radius: 3px;
+    background: #040702;
+    display: inline-block;
+}
+
+#happyNewYear-div div>span {
+    padding: 15px;
+    border-radius: 3px;
+    background: #6595bd;
+    display: inline-block;
+}
+
+.smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.button2 {
+    background-color: #060706;
+    /* Green */
+    border: none;
+    color: rgb(17, 16, 16);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button3 {
+    background-color: rgb(24, 22, 22);
+    color: black;
+    border: 2px solid #f44336;
+}
+
+.button3:hover {
+    background-color: #f44336;
+    color: rgb(15, 15, 15);
+}

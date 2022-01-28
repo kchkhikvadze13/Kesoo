@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(248, 196, 132);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: chocolate;
+    margin: 200px auto;
+    animation-name: square-to-circle;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0;
+        background-color: chocolate;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        background-color: coral;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: orange;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background: coral;
+        transform: rotate(135);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: chocolate;
+        transform: rotate(180deg);
+    }
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    margin: 20% auto;
+    background-color: black;
+    animation-name: circle-shape;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes circle-shape {
+    0% {
+        border-radius: 0;
+        background-color: rgb(19, 18, 17);
+        transform: rotate(0deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: rgb(221, 33, 0);
+        transform: rotate(180deg);
+    }
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    margin: 20% auto;
+    background-color: black;
+    animation-name: circle-shape2;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes circle-shape2 {
+    0% {
+        border-radius: 0;
+        background-color: rgb(10, 10, 10);
+        transform: rotate(0deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: rgb(255, 38, 0);
+        transform: rotate(180deg);
+    }
+}

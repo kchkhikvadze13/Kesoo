@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS demo</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>let's learn some JS</h1>
+    <h2>how do we do on click events and alerts on an anchor</h2>
+    <a href="https://www.w3schools.com/js/js_intro.asp" target="_blank" onclick="alert('you are naviating')">this is a website</a>
+    <hr>
+    <h2>how do we change HTML with JS with a button</h2>
+    <p>what's my secret identity?</p>
+    <p id="secret"></p>
+    <button onclick="document.getElementById('secret').innerHTML='Nana nana nana nana, batman!';document.getElementById('secret').style.display='block'">reveal </button>
+    <button onclick="document.getElementById('secret').style.display='none'">hide </button>
+
+    <hr>
+    <h2>how do we change images with JS?</h2>
+    <img src="images/pic_bulboff.gif.gif" alt="light bulb" id="my-image">
+    <button onclick="document.getElementById('my-image').src='images/pic_bulbon.gif.gif'">turn on</button>
+
+
+    <hr>
+    <h2>how do we change css styles with a button?</h2>
+    <h3 id="text">Hi I'm Alice</h3>
+    <button onclick="document.getElementById('text').style.fontSize ='x-large';document.getElementById('text').style.color='red'">ate me</button>
+    <button onclick="document.getElementById('text').style.fontSize='x-small'">drink me</button>
+
+    <hr>
+    <h2 id="decoration">hit the button and see what's gonna happen </h2>
+    <button onclick="document.getElementById('decoration').style.textDecoration ='underline overline';document.getElementById('decoration').style.color='blue'">click here</button>
+
+
+    <hr>
+    <h2 id="transition">I can fly</h2>
+    <button onclick="document.getElementById('transition').style.transform ='rotate(45deg)'">try me</button>
+</body>
+
+</html>

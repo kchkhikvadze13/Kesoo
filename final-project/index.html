@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DACHA DINER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hbq4tzf.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <!--<div class="grid-item navmenu">-->
+
+
+        <ul class="nav">
+            <div id="mySidebar" class="navbar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+
+            </div>
+            <button class="openbtn" onclick="openNav()">&#9776; </button>
+        </ul>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("Main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("Main").style.marginLeft = "0";
+            }
+        </script>
+
+
+
+
+        <div class="grid-item Header">DACHA<img src="gallery/dd-logo.png" style="width: 30px; height: 40px;">DINER</div>
+
+        <div class="container">
+            <img src="gallery/background.jpg" alt="background" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">
+                    <a href="https://www.exploretock.com/dachadiner?tock_medium=search_nav&tock_source=tock" target="blank">ORDER ONLINE</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="fa-facebook">
+            <br>
+
+            <a href="https://www.facebook.com/dachadiner" target="blank"><img src="gallery/fb logo.png" style="width:55px; height: 60px;"></a>
+        </div>
+        <div class="in-instagram">
+            <a href="https://www.instagram.com/dachadiner/" target="blank"><img src="gallery/instagram.png" style="width:75px; height:85px ;"></a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+
+    <body>
+        <div class="footer">
+            <p>Thursday & Friday 4pm - 8pm; Saturday & Sunday 10am - 2pm </p>
+
+            <body onload="startTime()">
+
+
+
+                <div id="txt"></div>
+
+                <script>
+                    function startTime() {
+                        const today = new Date();
+                        let h = today.getHours();
+                        let m = today.getMinutes();
+                        let s = today.getSeconds();
+                        m = checkTime(m);
+                        s = checkTime(s);
+                        document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+                        setTimeout(startTime, 1000);
+                    }
+
+                    function checkTime(i) {
+                        if (i < 10) {
+                            i = "0" + i
+                        }; // add zero in front of numbers < 10
+                        return i;
+                    }
+                </script>
+            </body>
+
+        </div>
+
+
+    </body>
+
+</body>
+
+</html>

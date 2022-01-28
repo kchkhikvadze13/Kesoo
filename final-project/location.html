@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+
+
+    <div class="grid-container">
+        <ul class="nav">
+            <div id="mySidebar" class="navbar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="location.html">Location</a></li>
+
+
+
+            </div>
+            <button class="openbtn" onclick="openNav()">&#9776; </button>
+        </ul>
+
+
+
+
+
+        <div class="grid-item Header">DACHA<img src="gallery/dd-logo.png" style="width: 30px; height: 40px;">DINER</div>
+
+        <div class="fa-facebook">
+            <br>
+            <a href="https://www.facebook.com/dachadiner" target="blank"><img src="gallery/fb logo.png" style="width:55px; height: 60px;"></a>
+        </div>
+        <div class="in-instagram">
+            <a href="https://www.instagram.com/dachadiner/" target="blank"><img src="gallery/instagram.png" style="width:75px; height:85px ;"></a>
+        </div>
+        <div class="grid-item h1">click on the picture to go to google maps. </div>
+        <br>
+        <br>
+
+        <div class="containerr">
+            <a href="https://www.google.com/maps/place/1416+E+Olive+Way,+Seattle,+WA+98122/@47.6175888,-122.3287855,17z/data=!3m1!4b1!4m5!3m4!1s0x5490153362795051:0xe2031cd525322694!8m2!3d47.6175888!4d-122.3265968" target="blank"> <img src="gallery/Screenshot (22).png" alt="background" class="image" style="width:100%"></a>
+
+        </div>
+
+
+
+
+
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("Main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("Main").style.marginLeft = "0";
+            }
+        </script>
+    </div>
+    <br>
+    <br>
+
+
+    <body>
+        <div class="footer">
+            <p>Thursday & Friday 4pm - 8pm; Saturday & Sunday 10am - 2pm </p>
+
+            <body onload="startTime()">
+
+
+
+                <div id="txt"></div>
+
+                <script>
+                    function startTime() {
+                        const today = new Date();
+                        let h = today.getHours();
+                        let m = today.getMinutes();
+                        let s = today.getSeconds();
+                        m = checkTime(m);
+                        s = checkTime(s);
+                        document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+                        setTimeout(startTime, 1000);
+                    }
+
+                    function checkTime(i) {
+                        if (i < 10) {
+                            i = "0" + i
+                        }; // add zero in front of numbers < 10
+                        return i;
+                    }
+                </script>
+            </body>
+        </div>
+    </body>
+
+
+
+
+</body>
+
+</html>
