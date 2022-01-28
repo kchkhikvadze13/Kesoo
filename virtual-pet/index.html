@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keso's Virtual pet </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="gallery/pic.png">
+
+</head>
+
+<body style="height: 800px; width:1240px; border:5px solid  black; text-align: center;">
+    <h1>This is my Bee! </h1>
+    <h2>feed, pet and wash Bee to keep her happy!</h2>
+    <img src="gallery/happy.gif" alt="happy Eevee">
+
+    <div id="pet-condition">
+        <h5>Bee is happy</h5>
+    </div>
+    <br>
+    <div id="pirveli" style="position: absolute;top: 520px; left: 200px;">
+        <p>belly</p>
+        <meter id="bellymeter" min="0" max="10"></meter><br>
+        <p id="belly-paragraph">0</p>
+        <button id="belly button" onclick="feedPet();">feed me </button>
+    </div>
+    <br>
+
+    <div id="meore" style="position:absolute; top:520px; left: 1000px;">
+        <p>shower </p>
+        <meter id="clean" min="0" max="10"></meter>
+        <p id="clean-paragraph">0</p>
+        <button id="washing-button" onclick="washPet();">wash me </button>
+    </div>
+    <div id="mesame">
+        <p>mood</p>
+        <meter id="happymeter" min="0" max="10"></meter>
+        <p id="happy-paragraph">0</p>
+        <button id="happines-button" onclick="petPet();">pet me</button>
+    </div>
+
+
+
+
+    <script src="js/pet.js"></script>
+</body>
+
+</html>
