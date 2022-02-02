@@ -13,8 +13,9 @@
 
 <body style="height: 800px; width:1240px; border:5px solid  black; text-align: center;">
     <h1>This is my Bee! </h1>
-    <h2>feed, pet and wash Bee to keep her happy!</h2>
-    <img src="gallery/happy.gif" alt="happy Eevee">
+    <h2> she ic crying becayse she is sad, hungry and dirty. Feed, pet and wash Bee to keep her happy!</h2>
+    <h3>...don't forget, you only have 1 minute!</h3>
+    <img id="pet-image" src="gallery/happy.gif" alt="happy Eevee">
 
     <div id="pet-condition">
         <h5>Bee is happy</h5>
@@ -34,11 +35,17 @@
         <p id="clean-paragraph">0</p>
         <button id="washing-button" onclick="washPet();">wash me </button>
     </div>
-    <div id="mesame">
+    <div id="mesame" style="position: absolute; top:520px; left:590px">
         <p>mood</p>
         <meter id="happymeter" min="0" max="10"></meter>
         <p id="happy-paragraph">0</p>
         <button id="happines-button" onclick="petPet();">pet me</button>
+    </div>
+
+    <div id="time" style="position: absolute; top: 200px; left: 1000px; font-size: 30px">
+        <p>timer:</p>
+        <meter id="timer" min="0" max="60"></meter>
+        <p id="timeout">60</p>
     </div>
 
 

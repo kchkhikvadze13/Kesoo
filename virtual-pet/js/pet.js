@@ -1,6 +1,7 @@
 let mood = 0;
 let belly = 0;
 let shower = 0;
+let minute = 60;
 
 
 function feedPet() {
@@ -49,6 +50,17 @@ function decreasePet() {
     refreshUI();
 }
 
+function decreaseTime() {
+    if (minute > 0) {
+        minute -= 1;
+
+    }
+
+    refreshUI();
+}
+
+
+
 
 
 function refreshUI() {
@@ -67,7 +79,48 @@ function refreshUI() {
     let showerParagraph = document.getElementById("clean-paragraph");
     showerParagraph.innerHTML = shower;
 
+    //
+    let timeOut = document.getElementById("timer");
+    timeOut.value = minute;
+    let timerParagraph = document.getElementById("timeout");
+    timerParagraph.innerHTML = minute;
+
+    //update pet image and paragraph
+    let petImg = document.getElementById("pet-image");
+    let petParagraph = document.getElementById("pet-condition");
+
+    if (mood <= 3 && belly <= 3 && shower <= 3) {
+        petImg.src = "gallery/sad.gif";
+        petParagraph.innerHTML = "Oh, no... she is crying!";
+
+    } else { // default image and state
+        petImg.src = "gallery/happy.gif"
+        petParagraph.innerHTML = "Happy bee!";
+    }
+
+    if (shower >= 8) {
+        petImg.src = "gallery/showering.gif";
+        petParagraph.innerHTML = "she is clean now!";
+
+    }
+    if (belly >= 8) {
+        petImg.src = "gallery/qoobee-eating.gif"
+        petParagraph.innerHTML = "good joob!";
+    }
+
+    if (mood >= 8) {
+        petImg.src = "gallery/love.gif"
+        petParagraph.innerHTML = "she is so happuy with you!";
+    }
+    if (minute <= 0) {
+        alert("Time is out! Refresh the page if you want to keep playing!")
+    }
 
 }
 
-let petTimer = setInterval(decreasePet, 990);
+
+
+
+let minut = setInterval(decreaseTime, 1000);
+
+let petTimer = setInterval(decreasePet, 1000);
