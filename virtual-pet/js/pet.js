@@ -123,4 +123,4 @@ function refreshUI() {
 
 let minut = setInterval(decreaseTime, 1000);
 
-let petTimer = setInterval(decreasePet, 1000);
+let petTimer = setInterval(decreasePet, 990);
