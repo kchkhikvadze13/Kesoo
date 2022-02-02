@@ -37,6 +37,18 @@
         h1 {
             text-shadow: 2px 2px #ff0000;
         }
+        
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+        
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
     </style>
 
 </head>
@@ -48,7 +60,7 @@
         <li> <a href="about.html">About</a></li>
     </ul>
 
-
+    <button onclick="myFunction()">Toggle dark mode</button>
 
     <h1> today we will figure out style and and do some cool stuff </h1>
     <h2> do you remember how we add style with inline</h2>
@@ -67,7 +79,12 @@
     </div>
 
 
-
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 
 </body>
 

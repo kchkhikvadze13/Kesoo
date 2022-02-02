@@ -1,0 +1,22 @@
+body {
+    background: rgb(224, 197, 233);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+pre code {
+    background: rgb(146, 55, 155);
+    border: 1px solid rgb(71, 68, 71);
+    display: block;
+    padding: 20px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}

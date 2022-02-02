@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark mode demo by Keso Chkhikvadze</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Welcome to my demo!</h1>
+    <h2>Today, I will expalin how to advance your website by adding the dark mode option!</h2>
+    <hr>
+    <p>Light-on-dark color scheme—also called black mode, dark mode, dark theme or night mode—is a color scheme that uses light-colored text, icons, and graphical user interface elements on a dark background and is often discussed in terms of computer user
+        interface design and web design.</p>
+    <hr>
+    <h4>Step 1: <br> First, Let's create a button in our index.html. At the and of the demo, by clicking this button the viewer will be able to toggle dark mode! </h4> <br>
+    <pre>
+                <code>
+                   button onclick="myFunction()">Switch to dark mode</button>
+
+                </code>
+                <p1>note: add button tag from both sides!</p1>
+            </pre>
+    <h4>Step2: <br>Now we need to apply css to our code!</h4>
+    <pre>
+                <code>
+                      .dark-mode {
+                        background-color: black;
+                        color: white;
+                      }
+                </code>
+            </pre>
+    <h4>Step3: <br> Now it's time for magic to happen! let's add a little bit of Java Script</h4>
+    <pre>
+            <code>
+                function myFunction() {
+                    var element = document.body;
+                    element.classList.toggle("dark-mode");
+                 }
+                 
+            </code>
+            <p>note: add this code under script tag!</p>
+        </pre>
+    <h4>Now try it by yourself! <br> <br>
+        <button onclick="myFunction()">Switch to dark mode</button>
+    </h4>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+
+</body>
+
+</html>
