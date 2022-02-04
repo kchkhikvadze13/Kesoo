@@ -37,3 +37,10 @@ ctx.beginPath();
 ctx.arc(100, 50, 25, 0, 2 * mathPI);
 ctx.strokeStyle = "Red";
 ctx.stroke();
+
+for (let radius = 25; radius = 5;) {
+    ctx.beginPath();
+    ctx.arc(100, 50, radius, 0, 2 * Math.PI);
+    ctx.strokeStyle = "Red";
+    screenTop.stroke();
+}
