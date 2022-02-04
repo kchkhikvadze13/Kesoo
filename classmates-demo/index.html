@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building classmate's demo - Keso Chkhikvadze</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- 1) frosted glass demo by Logan  and images slider by Taras-->
+    <div class="container">
+        <h1 style="text-align: center; padding: 10px;">Hello, this is my classmate's demo!</h1>
+        <h2 style="text-align: center; padding:10px">What do you think?</h2>
+        <div class="img-comp-container">
+            <div class="img-comp-img">
+                <img src="gallery/1.jpg" width="300" height="200">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+                <img src="gallery/2.jpg" width="300" height="200">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function initComparisons() {
+            var x, i;
+
+            x = document.getElementsByClassName("img-comp-overlay");
+            for (i = 0; i < x.length; i++) {
+
+                compareImages(x[i]);
+            }
+
+            function compareImages(img) {
+                var slider, img, clicked = 0,
+                    w, h;
+
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+
+                img.style.width = (w / 2) + "px";
+
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider");
+
+                img.parentElement.insertBefore(slider, img);
+
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+
+                slider.addEventListener("mousedown", slideReady);
+
+                window.addEventListener("mouseup", slideFinish);
+
+                slider.addEventListener("touchstart", slideReady);
+
+                window.addEventListener("touchend", slideFinish);
+
+                function slideReady(e) {
+
+                    e.preventDefault();
+
+                    clicked = 1;
+
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                }
+
+                function slideFinish() {
+
+                    clicked = 0;
+                }
+
+                function slideMove(e) {
+                    var pos;
+
+                    if (clicked == 0) return false;
+
+                    pos = getCursorPos(e)
+
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+
+                    slide(pos);
+                }
+
+                function getCursorPos(e) {
+                    var a, x = 0;
+                    e = (e.changedTouches) ? e.changedTouches[0] : e;
+
+                    a = img.getBoundingClientRect();
+
+                    x = e.pageX - a.left;
+
+                    x = x - window.pageXOffset;
+                    return x;
+                }
+
+                function slide(x) {
+
+                    img.style.width = x + "px";
+
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        initComparisons();
+    </script>
+
+
+</body>
+
+</html>
