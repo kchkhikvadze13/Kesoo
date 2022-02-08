@@ -9,10 +9,12 @@
 
 </head>
 
-<body>
+<body onkeydown="keyPressed(event)" onkeyup="keyReleased(event)">
     <h1 style="text-align: center;">canvas animation demo</h1>
     <canvas id="my-canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
 
+    <p id="keydown-output"></p>
+    <p id="keyup-output"></p>
     <script src="js/animation.js"></script>
 </body>
 
