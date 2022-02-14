@@ -48,6 +48,12 @@ let playerY = 250;
 let playerXDir = 0;
 let playerYDir = 0;
 let playerSpeed = 2;
+//ball position and movement
+let ballX = 50;
+let ballY = 100;
+let ballXDir = 2.5;
+let ballYDir = 2;
+let ballRadius = 15;
 
 function drawPlayer() {
     ctx.fillRect(playerX, playerY, 100, 20);
@@ -56,12 +62,45 @@ function drawPlayer() {
 function movePlayer() {
     playerX += (playerSpeed * playerXDir);
     playerY += (playerSpeed * playerYDir);
+    //edge check
+    if (playerX < 0) {
+        playerX = 0;
+    } else if (playerX > 500 - 100) {
+        playerX = 500 - 100;
+    }
+
+
+}
+
+function drawBall() {
+    ctx.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI);
+    ctx.fill();
+}
+
+function moveBall() {
+    ctx.beginPath();
+    ballY += ballYDir;
+    ballX += ballXDir;
+
+}
+
+function checkBallCollision() {
+    //check vertical wall
+    if ((ballY > 500 - ballRadius) || (ballY < 0 + ballRadius)) {
+        ballYDir = ballYDir * -1;
+    } else if ((ballX > 500 - ballRadius) || (ballX < 0 + ballRadius)) {
+        ballXDir = ballXDir * -1;
+    }
 }
 
 function refreshPlayer() {
     ctx.clearRect(0, 0, 500, 500);
     movePlayer();
     drawPlayer();
+    //animate ball
+    checkBallCollision();
+    moveBall();
+    drawBall();
 }
 
 
@@ -96,6 +135,7 @@ function moveVertical() {
     if (yPosition >= 500) {
         yPosition = 0;
     }
+
 }
 
 // #2 rect bouncing horizontally
@@ -123,4 +163,4 @@ function moveVertical() {
 
 
 //setInterval(moveVertical, 5);
-setInterval(refreshPlayer, 30);
+setInterval(refreshPlayer, 10)
