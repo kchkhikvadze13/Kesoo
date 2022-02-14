@@ -94,6 +94,15 @@ function checkBallCollision() {
     } else if ((ballX > 500 - BALL_RADIUS) || (ballX < 0 + BALL_RADIUS)) {
         ballXDir = ballXDir * -1;
     }
+    //check to see if it hit the paddle
+    if (ballX + BALL_RADIUS >= playerX &&
+        ballX - BALL_RADIUS <= playerX + PADDLE_WIDTH &&
+        ballY + BALL_RADIUS >= playerY &&
+        ballY - BALL_RADIUS <= playerY + PADDLE_HEIGHT) {
+        ballYDir = ballYDir * -1.01;
+        // ballYDir *=-1
+        // ballYDir - ballYDir
+    }
 }
 
 function refreshPlayer() {
