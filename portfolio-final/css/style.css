@@ -389,3 +389,13 @@ tr {
     text-align: center;
     color: #40633f;
 }
+
+.header {
+    font-size: 67px;
+    padding: 80px;
+    text-align: center;
+    color: #40633f;
+    font-family: azote, serif;
+    font-weight: 700;
+    font-style: italic;
+}

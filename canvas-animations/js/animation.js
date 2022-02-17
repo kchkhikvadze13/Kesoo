@@ -3,6 +3,7 @@ let ctx = myCamvas.getContext("2d");
 //get paragraph items
 let keydownOutput = document.getElementById("keydown-output");
 let keyupOutput = document.getElementById("keyup-output");
+let emoji = document.getElementById("emoji")
 
 
 //when key is pressed 
@@ -50,6 +51,11 @@ let playerYDir = 0;
 let playerSpeed = 2;
 const PADDLE_WIDTH = 100;
 const PADDLE_HEIGHT = 20;
+
+//image setting 
+const IMG_WIDTH = 40;
+const IMG_HEIGHT = 40;
+
 //ball position and movement
 let ballX = 50;
 let ballY = 100;
@@ -80,6 +86,10 @@ function drawBall() {
     ctx.fill();
 }
 
+function drawImage() {
+    ctx.drawImage(emoji, ballX, ballY, IMG_WIDTH, IMG_HEIGHT);
+}
+
 function moveBall() {
     ctx.beginPath();
     ballY += ballYDir;
@@ -87,18 +97,20 @@ function moveBall() {
 
 }
 
+
+
 function checkBallCollision() {
     //check vertical wall
-    if ((ballY > 500 - BALL_RADIUS) || (ballY < 0 + BALL_RADIUS)) {
+    if ((ballY > 500 - IMG_HEIGHT) || (ballY < 0 + IMG_HEIGHT)) {
         ballYDir = ballYDir * -1;
-    } else if ((ballX > 500 - BALL_RADIUS) || (ballX < 0 + BALL_RADIUS)) {
+    } else if ((ballX > 500 - IMG_HEIGHT) || (ballX < 0 + IMG_HEIGHT)) {
         ballXDir = ballXDir * -1;
     }
     //check to see if it hit the paddle
-    if (ballX + BALL_RADIUS >= playerX &&
-        ballX - BALL_RADIUS <= playerX + PADDLE_WIDTH &&
-        ballY + BALL_RADIUS >= playerY &&
-        ballY - BALL_RADIUS <= playerY + PADDLE_HEIGHT) {
+    if (ballX + IMG_HEIGHT >= playerX &&
+        ballX - IMG_WIDTH <= playerX + PADDLE_WIDTH &&
+        ballY + IMG_HEIGHT >= playerY &&
+        ballY - IMG_WIDTH <= playerY + PADDLE_HEIGHT) {
         ballYDir = ballYDir * -1.01;
         // ballYDir *=-1
         // ballYDir - ballYDir
@@ -112,7 +124,8 @@ function refreshPlayer() {
     //animate ball
     checkBallCollision();
     moveBall();
-    drawBall();
+    // drawBall();
+    drawImage();
 }
 
 
