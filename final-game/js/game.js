@@ -1,42 +1,54 @@
-let myGame = document.getElementById("my-game");
-let ctx = myGame.getContext("2d");
-let keydownOutput = document.getElementById("keydown-output");
-let keyupOutput = document.getElementById("keyup-output");
-let pic = document.getElementById("enemy")
-let picture = document.getElementById("life")
-let image = document.getElementById("finish")
-let image2 = document.getElementById("player")
+alert("are you ready to play game?")
+
+var x = 5; //Starting x coord.
+
+var y = 5; //Starting y coord.
+
+var max_x = 1200; //maximum x coord.
+
+var max_y = 400; //maximum y coord.
+
+var xoffset = 10; //Move 10px every step
+
+var yoffset = 10; //Move 10px every step
 
 
 
 
-//player position and movement
-let picX = 900;
-let picY = 100;
-let pictureX = 500;
-let pictureY = 100;
-let imageX = 1100;
-let imageY = 320;
-let image2X = 10;
-let image2Y = 310;
+function go()
 
-const IMG_WIDTH = 150;
-const IMG_HEIGHT = 150;
+{
 
-
-function drawImage() {
-    ctx.drawImage(pic, picX, picY, IMG_HEIGHT, IMG_WIDTH);
-    ctx.drawImage(picture, pictureX, pictureY, IMG_HEIGHT, IMG_WIDTH);
-    ctx.drawImage(image, imageX, imageY, IMG_HEIGHT, IMG_WIDTH);
-    ctx.drawImage(image2, image2X, image2Y, IMG_HEIGHT, IMG_WIDTH);
-}
-
-
-
-function refreshPlayer() {
-    drawImage();
-
+    moveLogo()
 
 }
 
-setInterval(refreshPlayer)
+function moveLogo() {
+
+    x = x + xoffset;
+
+    y = y + yoffset;
+
+    //Move the image to the new location
+
+    document.getElementById("figures").style.top = y + 'px';
+    document.getElementById("figures").style.left = x + 'px';
+
+    document.getElementById("figures2")
+
+    //if reach boundaries, reset offset vectors
+
+    if ((x + xoffset > max_x) || (x + xoffset < 0))
+
+        xoffset *= -1;
+
+    if ((y + yoffset > max_y) || (y + yoffset < 0))
+
+        yoffset *= -1;
+
+    window.setTimeout('moveLogo()', 100);
+
+
+    //call moveLogo every 100 ms
+
+}

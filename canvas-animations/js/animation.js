@@ -134,7 +134,7 @@ function refreshPlayer() {
 
 //object position
 //let xPosition = 0;
-let yPosition = 0;
+// let yPosition = 0;
 //let xDirection = 1;
 
 //function moveHorizontal() {

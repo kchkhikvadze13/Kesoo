@@ -6,22 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperWoman</title>
+
 </head>
 
-<body onkeydown="keyPressed(event)" onkeyup="keyReleased(event)" style="background-color:white">
-    <h1 style="text-align: center;">SuperWoman</h1>
-    <canvas id="my-game" width="1250" height="470" style="border: 1px solid black;"></canvas>
-
-    <p id="keydown-output"></p>
-    <p id="keyup-output"></p>
-
-    <img id="enemy" src="gallery/enemy.png" alt="enemy" style="visibility: hidden;">
-    <img id="life" src="gallery/life.png" alt="life" style="visibility: hidden;">
-    <img id="finish" src="gallery/finish.png" alt="finish line" style="visibility: hidden;">
-    <img id="player" src="gallery/player.png" alt="player" style="visibility: hidden;">
+<head>
 
 
 
+
+
+
+
+    <style>
+        div.bound {
+            display: block;
+            border-style: solid;
+            width: 1250px;
+            height: 470px;
+            border-width: 1px
+        }
+        
+        div.move {
+            position: absolute;
+        }
+    </style>
+
+
+
+</head>
+
+<body onload="go()">
+
+    <div class="bound">
+
+        <div id="figures" class="move">
+
+            <img src="gallery/enemy.png" alt="need image here" />
+        </div>
+
+        <div class="figures2">
+            <img src="gallery/life (2).png" alt="life" style="position: absolute; top: 50px; left: 600px;">
+            <img src="gallery/finish (2).png" alt="finish line" style="position: absolute; top: 70px; left: 1040px;">
+            <img src="gallery/player (2).png" alt="player" style="position: absolute; top:250px; left: 10px;">
+        </div>
+
+
+    </div>
     <script src="js/game.js"></script>
 </body>
 
