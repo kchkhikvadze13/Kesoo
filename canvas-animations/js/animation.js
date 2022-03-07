@@ -112,8 +112,9 @@ function checkBallCollision() {
         ballY + IMG_HEIGHT >= playerY &&
         ballY - IMG_WIDTH <= playerY + PADDLE_HEIGHT) {
         ballYDir = ballYDir * -1.01;
-        // ballYDir *=-1
-        // ballYDir - ballYDir
+        alert("game is over")
+            // ballYDir *=-1
+            // ballYDir - ballYDir
     }
 }
 

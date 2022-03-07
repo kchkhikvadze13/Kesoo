@@ -17,41 +17,34 @@
 
 
 
-    <style>
-        div.bound {
-            display: block;
-            border-style: solid;
-            width: 1250px;
-            height: 470px;
-            border-width: 1px
-        }
-        
-        div.move {
-            position: absolute;
-        }
-    </style>
 
 
 
 </head>
 
-<body onload="go()">
+<body onkeydown="keyPressed(event)" onkeyup="keyReleased(event)">
 
+    <canvas id="my-game" width="1250" height="470" style="border: 1px solid black;"></canvas>
     <div class="bound">
 
         <div id="figures" class="move">
 
-            <img src="gallery/enemy.png" alt="need image here" />
+
+            <img id="eagle" src="gallery/enemy.png" style="visibility: hidden;" />
         </div>
 
-        <div class="figures2">
-            <img src="gallery/life (2).png" alt="life" style="position: absolute; top: 50px; left: 600px;">
-            <img src="gallery/finish (2).png" alt="finish line" style="position: absolute; top: 70px; left: 1040px;">
-            <img src="gallery/player (2).png" alt="player" style="position: absolute; top:250px; left: 10px;">
-        </div>
+
+
+        <img src="gallery/finish (2).png" alt="finish line" style="position: absolute; top: 70px; left: 1040px;">
+
+        <img id="figures2" src="gallery/player (2).png" alt="player" style="position: absolute; top:250px; left: 10px; visibility: hidden;">
 
 
     </div>
+
+
+    <p id="keydown-output"></p>
+    <p id="keyup-output"></p>
     <script src="js/game.js"></script>
 </body>
 
