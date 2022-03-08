@@ -86,8 +86,8 @@ function movePlayer() {
 }
 
 function moveEagle() {
-    eagleX += 1 * eaglexDir;
-    eagleY += 1 * eagleyDir;
+    eagleX += 5 * eaglexDir;
+    eagleY += 5 * eagleyDir;
     // check for walls
     if (eagleY + EAGLEIMG_HEIGHT > 500) {
         eagleyDir = -1;
