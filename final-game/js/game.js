@@ -1,4 +1,4 @@
-// alert("are you ready to play game?")
+//  alert("are you ready to play game?")
 let myGame = document.getElementById("my-game");
 let ctx = myGame.getContext("2d");
 let player = document.getElementById("figures2")
@@ -7,11 +7,10 @@ let keydownOutput = document.getElementById("keydown-output");
 let keyupOutput = document.getElementById("keyup-output");
 
 function keyPressed(event) {
-    //get the actuall key pressed
     let key = event.keyCode;
     keydownOutput.innerHTML = "key down code: " + key;
 
-    //make player stop
+
     if (key === 37) {
         playerXDir = -1;
     } else if (key === 39) {
@@ -24,11 +23,10 @@ function keyPressed(event) {
 }
 
 function keyReleased(event) {
-    //get the actuall key pressed
     let key = event.keyCode;
     keyupOutput.innerHTML = "key up code: " + key;
 
-    //move player
+
     if (key === 37) {
         playerXDir = 0;
     } else if (key === 39) {
@@ -70,7 +68,6 @@ function drawEagle() {
 function movePlayer() {
     playerX += (playerSpeed * playerXDir);
     playerY += (playerSpeed * playerYDir);
-    //edge check
     if (playerX < 0) {
         playerX = 0;
     } else if (playerX > 1250 - PADDLE_WIDTH) {
@@ -88,7 +85,6 @@ function movePlayer() {
 function moveEagle() {
     eagleX += 5 * eaglexDir;
     eagleY += 5 * eagleyDir;
-    // check for walls
     if (eagleY + EAGLEIMG_HEIGHT > 500) {
         eagleyDir = -1;
     } else if (eagleX + EAGLEIMG_WIDTH > 1250) {
@@ -106,7 +102,6 @@ function checkEagleCollision() {
     } else if ((eagleX > 1250 - EAGLEIMG_HEIGHT) || (eagleX < 0 + EAGLEIMG_HEIGHT)) {
         eaglexDir = eaglexDir * -1;
     }
-    //check to see if it hit the paddle
     if (eagleX + EAGLEIMG_HEIGHT >= playerX &&
         eagleX - EAGLEIMG_WIDTH <= playerX &&
         eagleY + EAGLEIMG_HEIGHT >= playerY &&
@@ -119,7 +114,7 @@ function checkEagleCollision() {
             eagleX = 90;
             eagleY = 90;
         } else if (play == "no") {
-            alert("Game over")
+            alert("gamr over")
         }
 
     }
